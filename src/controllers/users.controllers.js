@@ -17,6 +17,7 @@ export async function signIn(req,res){
     const { email, password } = req.body;
     try {
         const user = await db.query(`SELECT * FROM users WHERE email=$1;`, [email]);
+        if (user.rows.length <= 0) return res.sendStatus(401);
         const passOk = bcrypt.compareSync(password, user.rows[0].password);
         if (!passOk) return res.sendStatus(401);
         const token = uuid();
@@ -36,7 +37,7 @@ export async function getMyUrls(req, res){
             WHERE links."ownerId"=$1 GROUP BY users.id;
         `, [userId]);
         const urlsUser = await db.query(`SELECT id, "shortUrl", url, "visitCount" FROM links where "ownerId"=$1;`,[userId]);
-        userInfo.rows[0].shortnedUrls = urlsUser.rows;
+        userInfo.rows[0].shortenedUrls = urlsUser.rows;
         res.send(userInfo.rows[0]);
     } catch (error) {
         res.status(500).send(error.message);

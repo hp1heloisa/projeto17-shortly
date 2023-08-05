@@ -5,7 +5,7 @@
 -- Dumped from database version 13.11 (Ubuntu 13.11-1.pgdg20.04+1)
 -- Dumped by pg_dump version 15.3
 
--- Started on 2023-08-05 14:21:54 -03
+-- Started on 2023-08-05 15:57:40 -03
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -35,7 +35,7 @@ CREATE EXTENSION IF NOT EXISTS btree_gin WITH SCHEMA public;
 
 
 --
--- TOC entry 4114 (class 0 OID 0)
+-- TOC entry 4115 (class 0 OID 0)
 -- Dependencies: 15
 -- Name: EXTENSION btree_gin; Type: COMMENT; Schema: -; Owner: -
 --
@@ -52,7 +52,7 @@ CREATE EXTENSION IF NOT EXISTS btree_gist WITH SCHEMA public;
 
 
 --
--- TOC entry 4115 (class 0 OID 0)
+-- TOC entry 4116 (class 0 OID 0)
 -- Dependencies: 19
 -- Name: EXTENSION btree_gist; Type: COMMENT; Schema: -; Owner: -
 --
@@ -69,7 +69,7 @@ CREATE EXTENSION IF NOT EXISTS citext WITH SCHEMA public;
 
 
 --
--- TOC entry 4116 (class 0 OID 0)
+-- TOC entry 4117 (class 0 OID 0)
 -- Dependencies: 8
 -- Name: EXTENSION citext; Type: COMMENT; Schema: -; Owner: -
 --
@@ -86,7 +86,7 @@ CREATE EXTENSION IF NOT EXISTS cube WITH SCHEMA public;
 
 
 --
--- TOC entry 4117 (class 0 OID 0)
+-- TOC entry 4118 (class 0 OID 0)
 -- Dependencies: 17
 -- Name: EXTENSION cube; Type: COMMENT; Schema: -; Owner: -
 --
@@ -103,7 +103,7 @@ CREATE EXTENSION IF NOT EXISTS dblink WITH SCHEMA public;
 
 
 --
--- TOC entry 4118 (class 0 OID 0)
+-- TOC entry 4119 (class 0 OID 0)
 -- Dependencies: 2
 -- Name: EXTENSION dblink; Type: COMMENT; Schema: -; Owner: -
 --
@@ -120,7 +120,7 @@ CREATE EXTENSION IF NOT EXISTS dict_int WITH SCHEMA public;
 
 
 --
--- TOC entry 4119 (class 0 OID 0)
+-- TOC entry 4120 (class 0 OID 0)
 -- Dependencies: 14
 -- Name: EXTENSION dict_int; Type: COMMENT; Schema: -; Owner: -
 --
@@ -137,7 +137,7 @@ CREATE EXTENSION IF NOT EXISTS dict_xsyn WITH SCHEMA public;
 
 
 --
--- TOC entry 4120 (class 0 OID 0)
+-- TOC entry 4121 (class 0 OID 0)
 -- Dependencies: 20
 -- Name: EXTENSION dict_xsyn; Type: COMMENT; Schema: -; Owner: -
 --
@@ -154,7 +154,7 @@ CREATE EXTENSION IF NOT EXISTS earthdistance WITH SCHEMA public;
 
 
 --
--- TOC entry 4121 (class 0 OID 0)
+-- TOC entry 4122 (class 0 OID 0)
 -- Dependencies: 18
 -- Name: EXTENSION earthdistance; Type: COMMENT; Schema: -; Owner: -
 --
@@ -171,7 +171,7 @@ CREATE EXTENSION IF NOT EXISTS fuzzystrmatch WITH SCHEMA public;
 
 
 --
--- TOC entry 4122 (class 0 OID 0)
+-- TOC entry 4123 (class 0 OID 0)
 -- Dependencies: 7
 -- Name: EXTENSION fuzzystrmatch; Type: COMMENT; Schema: -; Owner: -
 --
@@ -188,7 +188,7 @@ CREATE EXTENSION IF NOT EXISTS hstore WITH SCHEMA public;
 
 
 --
--- TOC entry 4123 (class 0 OID 0)
+-- TOC entry 4124 (class 0 OID 0)
 -- Dependencies: 13
 -- Name: EXTENSION hstore; Type: COMMENT; Schema: -; Owner: -
 --
@@ -205,7 +205,7 @@ CREATE EXTENSION IF NOT EXISTS intarray WITH SCHEMA public;
 
 
 --
--- TOC entry 4124 (class 0 OID 0)
+-- TOC entry 4125 (class 0 OID 0)
 -- Dependencies: 12
 -- Name: EXTENSION intarray; Type: COMMENT; Schema: -; Owner: -
 --
@@ -222,7 +222,7 @@ CREATE EXTENSION IF NOT EXISTS ltree WITH SCHEMA public;
 
 
 --
--- TOC entry 4125 (class 0 OID 0)
+-- TOC entry 4126 (class 0 OID 0)
 -- Dependencies: 4
 -- Name: EXTENSION ltree; Type: COMMENT; Schema: -; Owner: -
 --
@@ -239,7 +239,7 @@ CREATE EXTENSION IF NOT EXISTS pg_stat_statements WITH SCHEMA public;
 
 
 --
--- TOC entry 4126 (class 0 OID 0)
+-- TOC entry 4127 (class 0 OID 0)
 -- Dependencies: 22
 -- Name: EXTENSION pg_stat_statements; Type: COMMENT; Schema: -; Owner: -
 --
@@ -256,7 +256,7 @@ CREATE EXTENSION IF NOT EXISTS pg_trgm WITH SCHEMA public;
 
 
 --
--- TOC entry 4127 (class 0 OID 0)
+-- TOC entry 4128 (class 0 OID 0)
 -- Dependencies: 11
 -- Name: EXTENSION pg_trgm; Type: COMMENT; Schema: -; Owner: -
 --
@@ -273,7 +273,7 @@ CREATE EXTENSION IF NOT EXISTS pgcrypto WITH SCHEMA public;
 
 
 --
--- TOC entry 4128 (class 0 OID 0)
+-- TOC entry 4129 (class 0 OID 0)
 -- Dependencies: 10
 -- Name: EXTENSION pgcrypto; Type: COMMENT; Schema: -; Owner: -
 --
@@ -290,7 +290,7 @@ CREATE EXTENSION IF NOT EXISTS pgrowlocks WITH SCHEMA public;
 
 
 --
--- TOC entry 4129 (class 0 OID 0)
+-- TOC entry 4130 (class 0 OID 0)
 -- Dependencies: 16
 -- Name: EXTENSION pgrowlocks; Type: COMMENT; Schema: -; Owner: -
 --
@@ -307,7 +307,7 @@ CREATE EXTENSION IF NOT EXISTS pgstattuple WITH SCHEMA public;
 
 
 --
--- TOC entry 4130 (class 0 OID 0)
+-- TOC entry 4131 (class 0 OID 0)
 -- Dependencies: 5
 -- Name: EXTENSION pgstattuple; Type: COMMENT; Schema: -; Owner: -
 --
@@ -324,7 +324,7 @@ CREATE EXTENSION IF NOT EXISTS tablefunc WITH SCHEMA public;
 
 
 --
--- TOC entry 4131 (class 0 OID 0)
+-- TOC entry 4132 (class 0 OID 0)
 -- Dependencies: 6
 -- Name: EXTENSION tablefunc; Type: COMMENT; Schema: -; Owner: -
 --
@@ -341,7 +341,7 @@ CREATE EXTENSION IF NOT EXISTS unaccent WITH SCHEMA public;
 
 
 --
--- TOC entry 4132 (class 0 OID 0)
+-- TOC entry 4133 (class 0 OID 0)
 -- Dependencies: 21
 -- Name: EXTENSION unaccent; Type: COMMENT; Schema: -; Owner: -
 --
@@ -358,7 +358,7 @@ CREATE EXTENSION IF NOT EXISTS "uuid-ossp" WITH SCHEMA public;
 
 
 --
--- TOC entry 4133 (class 0 OID 0)
+-- TOC entry 4134 (class 0 OID 0)
 -- Dependencies: 9
 -- Name: EXTENSION "uuid-ossp"; Type: COMMENT; Schema: -; Owner: -
 --
@@ -375,7 +375,7 @@ CREATE EXTENSION IF NOT EXISTS xml2 WITH SCHEMA public;
 
 
 --
--- TOC entry 4134 (class 0 OID 0)
+-- TOC entry 4135 (class 0 OID 0)
 -- Dependencies: 3
 -- Name: EXTENSION xml2; Type: COMMENT; Schema: -; Owner: -
 --
@@ -388,7 +388,7 @@ SET default_tablespace = '';
 SET default_table_access_method = heap;
 
 --
--- TOC entry 231 (class 1259 OID 30313)
+-- TOC entry 229 (class 1259 OID 31007)
 -- Name: links; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -397,12 +397,13 @@ CREATE TABLE public.links (
     url text NOT NULL,
     "shortUrl" text NOT NULL,
     "ownerId" integer NOT NULL,
-    "visitCount" integer DEFAULT 0
+    "visitCount" integer DEFAULT 0,
+    createdat timestamp without time zone DEFAULT now()
 );
 
 
 --
--- TOC entry 230 (class 1259 OID 30311)
+-- TOC entry 228 (class 1259 OID 31005)
 -- Name: links_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
@@ -416,8 +417,8 @@ CREATE SEQUENCE public.links_id_seq
 
 
 --
--- TOC entry 4135 (class 0 OID 0)
--- Dependencies: 230
+-- TOC entry 4136 (class 0 OID 0)
+-- Dependencies: 228
 -- Name: links_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
 
@@ -425,19 +426,20 @@ ALTER SEQUENCE public.links_id_seq OWNED BY public.links.id;
 
 
 --
--- TOC entry 229 (class 1259 OID 28552)
+-- TOC entry 231 (class 1259 OID 31025)
 -- Name: tokens; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.tokens (
     id integer NOT NULL,
     token text NOT NULL,
-    "userId" integer
+    "userId" integer,
+    createdat timestamp without time zone DEFAULT now()
 );
 
 
 --
--- TOC entry 228 (class 1259 OID 28550)
+-- TOC entry 230 (class 1259 OID 31023)
 -- Name: tokens_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
@@ -451,8 +453,8 @@ CREATE SEQUENCE public.tokens_id_seq
 
 
 --
--- TOC entry 4136 (class 0 OID 0)
--- Dependencies: 228
+-- TOC entry 4137 (class 0 OID 0)
+-- Dependencies: 230
 -- Name: tokens_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
 
@@ -460,7 +462,7 @@ ALTER SEQUENCE public.tokens_id_seq OWNED BY public.tokens.id;
 
 
 --
--- TOC entry 227 (class 1259 OID 19416)
+-- TOC entry 227 (class 1259 OID 30995)
 -- Name: users; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -468,12 +470,13 @@ CREATE TABLE public.users (
     id integer NOT NULL,
     name text NOT NULL,
     email text NOT NULL,
-    password text NOT NULL
+    password text NOT NULL,
+    createdat timestamp without time zone DEFAULT now()
 );
 
 
 --
--- TOC entry 226 (class 1259 OID 19414)
+-- TOC entry 226 (class 1259 OID 30993)
 -- Name: users_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
@@ -487,7 +490,7 @@ CREATE SEQUENCE public.users_id_seq
 
 
 --
--- TOC entry 4137 (class 0 OID 0)
+-- TOC entry 4138 (class 0 OID 0)
 -- Dependencies: 226
 -- Name: users_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
@@ -496,7 +499,7 @@ ALTER SEQUENCE public.users_id_seq OWNED BY public.users.id;
 
 
 --
--- TOC entry 3966 (class 2604 OID 30316)
+-- TOC entry 3966 (class 2604 OID 31010)
 -- Name: links id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -504,7 +507,7 @@ ALTER TABLE ONLY public.links ALTER COLUMN id SET DEFAULT nextval('public.links_
 
 
 --
--- TOC entry 3965 (class 2604 OID 28555)
+-- TOC entry 3969 (class 2604 OID 31028)
 -- Name: tokens id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -512,7 +515,7 @@ ALTER TABLE ONLY public.tokens ALTER COLUMN id SET DEFAULT nextval('public.token
 
 
 --
--- TOC entry 3964 (class 2604 OID 19419)
+-- TOC entry 3964 (class 2604 OID 30998)
 -- Name: users id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -520,7 +523,7 @@ ALTER TABLE ONLY public.users ALTER COLUMN id SET DEFAULT nextval('public.users_
 
 
 --
--- TOC entry 3975 (class 2606 OID 30322)
+-- TOC entry 3974 (class 2606 OID 31017)
 -- Name: links links_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -529,16 +532,7 @@ ALTER TABLE ONLY public.links
 
 
 --
--- TOC entry 3969 (class 2606 OID 29012)
--- Name: users photos_u; Type: CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.users
-    ADD CONSTRAINT photos_u UNIQUE (email);
-
-
---
--- TOC entry 3973 (class 2606 OID 28560)
+-- TOC entry 3976 (class 2606 OID 31034)
 -- Name: tokens tokens_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -547,7 +541,7 @@ ALTER TABLE ONLY public.tokens
 
 
 --
--- TOC entry 3971 (class 2606 OID 19424)
+-- TOC entry 3972 (class 2606 OID 31004)
 -- Name: users users_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -556,7 +550,7 @@ ALTER TABLE ONLY public.users
 
 
 --
--- TOC entry 3977 (class 2606 OID 30323)
+-- TOC entry 3977 (class 2606 OID 31018)
 -- Name: links links_ownerId_fkey; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -565,7 +559,7 @@ ALTER TABLE ONLY public.links
 
 
 --
--- TOC entry 3976 (class 2606 OID 28561)
+-- TOC entry 3978 (class 2606 OID 31035)
 -- Name: tokens tokens_userId_fkey; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -573,7 +567,7 @@ ALTER TABLE ONLY public.tokens
     ADD CONSTRAINT "tokens_userId_fkey" FOREIGN KEY ("userId") REFERENCES public.users(id);
 
 
--- Completed on 2023-08-05 14:22:20 -03
+-- Completed on 2023-08-05 15:58:08 -03
 
 --
 -- PostgreSQL database dump complete
