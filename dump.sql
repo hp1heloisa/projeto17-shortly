@@ -5,7 +5,7 @@
 -- Dumped from database version 13.11 (Ubuntu 13.11-1.pgdg20.04+1)
 -- Dumped by pg_dump version 15.3
 
--- Started on 2023-08-05 15:57:40 -03
+-- Started on 2023-08-05 16:16:28 -03
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -388,7 +388,7 @@ SET default_tablespace = '';
 SET default_table_access_method = heap;
 
 --
--- TOC entry 229 (class 1259 OID 31007)
+-- TOC entry 231 (class 1259 OID 31076)
 -- Name: links; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -398,12 +398,12 @@ CREATE TABLE public.links (
     "shortUrl" text NOT NULL,
     "ownerId" integer NOT NULL,
     "visitCount" integer DEFAULT 0,
-    createdat timestamp without time zone DEFAULT now()
+    "createdAt" timestamp without time zone DEFAULT now()
 );
 
 
 --
--- TOC entry 228 (class 1259 OID 31005)
+-- TOC entry 230 (class 1259 OID 31074)
 -- Name: links_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
@@ -418,7 +418,7 @@ CREATE SEQUENCE public.links_id_seq
 
 --
 -- TOC entry 4136 (class 0 OID 0)
--- Dependencies: 228
+-- Dependencies: 230
 -- Name: links_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
 
@@ -426,7 +426,7 @@ ALTER SEQUENCE public.links_id_seq OWNED BY public.links.id;
 
 
 --
--- TOC entry 231 (class 1259 OID 31025)
+-- TOC entry 229 (class 1259 OID 31059)
 -- Name: tokens; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -434,12 +434,12 @@ CREATE TABLE public.tokens (
     id integer NOT NULL,
     token text NOT NULL,
     "userId" integer,
-    createdat timestamp without time zone DEFAULT now()
+    "createdAt" timestamp without time zone DEFAULT now()
 );
 
 
 --
--- TOC entry 230 (class 1259 OID 31023)
+-- TOC entry 228 (class 1259 OID 31057)
 -- Name: tokens_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
@@ -454,7 +454,7 @@ CREATE SEQUENCE public.tokens_id_seq
 
 --
 -- TOC entry 4137 (class 0 OID 0)
--- Dependencies: 230
+-- Dependencies: 228
 -- Name: tokens_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
 
@@ -462,7 +462,7 @@ ALTER SEQUENCE public.tokens_id_seq OWNED BY public.tokens.id;
 
 
 --
--- TOC entry 227 (class 1259 OID 30995)
+-- TOC entry 227 (class 1259 OID 31047)
 -- Name: users; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -471,12 +471,12 @@ CREATE TABLE public.users (
     name text NOT NULL,
     email text NOT NULL,
     password text NOT NULL,
-    createdat timestamp without time zone DEFAULT now()
+    "createdAt" timestamp without time zone DEFAULT now()
 );
 
 
 --
--- TOC entry 226 (class 1259 OID 30993)
+-- TOC entry 226 (class 1259 OID 31045)
 -- Name: users_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
@@ -499,7 +499,7 @@ ALTER SEQUENCE public.users_id_seq OWNED BY public.users.id;
 
 
 --
--- TOC entry 3966 (class 2604 OID 31010)
+-- TOC entry 3968 (class 2604 OID 31079)
 -- Name: links id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -507,7 +507,7 @@ ALTER TABLE ONLY public.links ALTER COLUMN id SET DEFAULT nextval('public.links_
 
 
 --
--- TOC entry 3969 (class 2604 OID 31028)
+-- TOC entry 3966 (class 2604 OID 31062)
 -- Name: tokens id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -515,7 +515,7 @@ ALTER TABLE ONLY public.tokens ALTER COLUMN id SET DEFAULT nextval('public.token
 
 
 --
--- TOC entry 3964 (class 2604 OID 30998)
+-- TOC entry 3964 (class 2604 OID 31050)
 -- Name: users id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -523,7 +523,7 @@ ALTER TABLE ONLY public.users ALTER COLUMN id SET DEFAULT nextval('public.users_
 
 
 --
--- TOC entry 3974 (class 2606 OID 31017)
+-- TOC entry 3976 (class 2606 OID 31086)
 -- Name: links links_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -532,7 +532,7 @@ ALTER TABLE ONLY public.links
 
 
 --
--- TOC entry 3976 (class 2606 OID 31034)
+-- TOC entry 3974 (class 2606 OID 31068)
 -- Name: tokens tokens_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -541,7 +541,7 @@ ALTER TABLE ONLY public.tokens
 
 
 --
--- TOC entry 3972 (class 2606 OID 31004)
+-- TOC entry 3972 (class 2606 OID 31056)
 -- Name: users users_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -550,7 +550,7 @@ ALTER TABLE ONLY public.users
 
 
 --
--- TOC entry 3977 (class 2606 OID 31018)
+-- TOC entry 3978 (class 2606 OID 31087)
 -- Name: links links_ownerId_fkey; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -559,7 +559,7 @@ ALTER TABLE ONLY public.links
 
 
 --
--- TOC entry 3978 (class 2606 OID 31035)
+-- TOC entry 3977 (class 2606 OID 31069)
 -- Name: tokens tokens_userId_fkey; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -567,7 +567,7 @@ ALTER TABLE ONLY public.tokens
     ADD CONSTRAINT "tokens_userId_fkey" FOREIGN KEY ("userId") REFERENCES public.users(id);
 
 
--- Completed on 2023-08-05 15:58:08 -03
+-- Completed on 2023-08-05 16:17:15 -03
 
 --
 -- PostgreSQL database dump complete
