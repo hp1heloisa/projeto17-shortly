@@ -47,3 +47,17 @@ export async function deleteUrl(req, res){
         res.status(500).send(error.message);
     }
 }
+
+export async function getRanking(req, res){
+    try {
+        const ranking = await db.query(`
+        SELECT users.id, users.name, COUNT(links.id) as "linksCount", 
+        COALESCE(SUM(links."visitCount"),0) as "visitCount" FROM users 
+        LEFT JOIN links ON users.id=links."ownerId" GROUP BY users.id 
+        ORDER BY "visitCount" DESC LIMIT 10;
+        `);
+        res.send(ranking.rows);
+    } catch (error) {
+        res.status(500).send(error.message);
+    }
+}
