@@ -44,3 +44,14 @@ export async function getMyUrls(req, res){
         res.status(500).send(error.message);
     }
 }
+
+export async function logOut(req, res) {
+    const { userId } = res.locals;
+    try {
+        console.log(userId);
+        await db.query(`DELETE FROM tokens WHERE "userId"=$1`, [userId]);
+        res.sendStatus(204);
+    } catch (error) {
+        res.status(500).send(error.message);
+    }
+}
