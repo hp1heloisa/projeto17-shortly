@@ -37,6 +37,7 @@ export async function getMyUrls(req, res){
             WHERE links."ownerId"=$1 GROUP BY users.id;
         `, [userId]);
         const urlsUser = await db.query(`SELECT id, "shortUrl", url, "visitCount" FROM links where "ownerId"=$1;`,[userId]);
+        if (userInfo.rows.length <= 0) return res.send(userInfo.rows);
         userInfo.rows[0].shortenedUrls = urlsUser.rows;
         res.send(userInfo.rows[0]);
     } catch (error) {
