@@ -32,19 +32,7 @@ export async function redirectUrl(req, res) {
         if (urlInfo.rows.length <= 0) return res.sendStatus(404);
         const contagem = urlInfo.rows[0].visitCount+1;
         await db.query(`UPDATE links SET "visitCount"=$1 WHERE id=$2;`, [contagem, urlInfo.rows[0].id]);
-        //res.redirect(urlInfo.rows[0].url);
-        res.send(`
-            <html>
-                <head>
-                    <script>
-                        window.location.href = "${urlInfo.rows[0].url}";
-                    </script>
-                </head>
-                <body>
-                    Redirecionando...
-                </body>
-            </html>
-        `)
+        res.redirect(urlInfo.rows[0].url);
     } catch (error) {
         res.status(500).send(error.message);
     }
