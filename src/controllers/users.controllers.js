@@ -32,12 +32,10 @@ export async function getMyUrls(req, res){
     const { userId } = res.locals;
     try {
         const userInfo = await db.query(`
-            SELECT users.id, users.name, SUM(links."visitCount") as "visitCount"
-            FROM links JOIN users ON users.id=links."ownerId"
-            WHERE links."ownerId"=$1 GROUP BY users.id;
-        `, [userId]);
+            SELECT users.id, users.name, COALESCE(SUM(links."visitCount"),0) as "visitCount" FROM users 
+            LEFT JOIN links ON users.id=links."ownerId" WHERE users.id=$1 GROUP BY users.id;
+            `, [userId]);
         const urlsUser = await db.query(`SELECT id, "shortUrl", url, "visitCount" FROM links where "ownerId"=$1;`,[userId]);
-        if (userInfo.rows.length <= 0) return res.send(userInfo.rows);
         userInfo.rows[0].shortenedUrls = urlsUser.rows;
         res.send(userInfo.rows[0]);
     } catch (error) {
