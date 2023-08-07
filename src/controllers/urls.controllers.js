@@ -56,7 +56,7 @@ export async function getRanking(req, res){
         LEFT JOIN links ON users.id=links."ownerId" GROUP BY users.id 
         ORDER BY "visitCount" DESC LIMIT 10;
         `);
-        res.send(ranking.rows);
+        res.status(200).send(ranking.rows);
     } catch (error) {
         res.status(500).send(error.message);
     }
